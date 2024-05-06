@@ -1,0 +1,10 @@
+package com.example.example;
+import java.time.LocalTime;
+import java.util.List;
+import java.util.Map;
+
+public interface TicketAnalyzer {
+    void analyzeFlights(List<Map<String, Object>> tickets);
+
+    Map<String, LocalTime> getMinFlightTimes();
+}
