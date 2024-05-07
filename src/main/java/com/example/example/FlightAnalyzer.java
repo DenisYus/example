@@ -32,10 +32,10 @@ public class FlightAnalyzer implements TicketAnalyzer {
             minFlightTimes.put(carrier, minFlightTimes.getOrDefault(carrier, LocalTime.MAX).isBefore(duration)
                     ? minFlightTimes.getOrDefault(carrier, LocalTime.MAX) : duration);
         }
-    }
 
-    @Override
-    public Map<String, LocalTime> getMinFlightTimes() {
-        return minFlightTimes;
+        System.out.println("Минимальное время полета между Владивостоком и Тель-Авивом для каждого авиаперевозчика:");
+        for (Map.Entry<String, LocalTime> entry : minFlightTimes.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue().format(DateTimeFormatter.ofPattern("H:mm")));
+        }
     }
 }
