@@ -10,7 +10,7 @@ import java.util.*;
 public class ExampleApplication {
     public static void main(String[] args) {
         SpringApplication.run(ExampleApplication.class, args);
-        String filePath = "E:\\example\\tickets.json";
+        String filePath = "src/main/java/com/example/example/tickets.json";
         DataReader jsonFileReader = new JsonFileReader(filePath);
         TicketAnalyzer flightAnalyzer = new FlightAnalyzer();
         AverageCalculator averageCalculator = new AverageCalculator();
