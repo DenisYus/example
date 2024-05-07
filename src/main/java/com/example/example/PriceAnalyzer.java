@@ -33,9 +33,9 @@ public class PriceAnalyzer {
             double medianPrice = averageCalculator.calculateMedian(validPrices);
             double priceDifference = Math.abs(averagePrice - medianPrice);
 
-            System.out.println("Average price: " + averagePrice);
-            System.out.println("Median price: " + medianPrice);
-            System.out.println("Price difference: " + priceDifference);
+            System.out.println("Средняя цена: " + averagePrice);
+            System.out.println("Медиана цен: " + medianPrice);
+            System.out.println("Отличия цены: " + priceDifference);
         } catch (DataReadException e) {
             System.err.println("Error reading data: " + e.getMessage());
         } catch (NoValidTicketsException e) {
