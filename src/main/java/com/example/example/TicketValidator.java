@@ -29,12 +29,7 @@ public class TicketValidator implements TicketValidation {
             return false;
         }
 
-        LocalDate departureDate = LocalDate.parse((String) ticket.get("departure_date"), DateTimeFormatter.ofPattern("dd.MM.yy"));
-        LocalDate arrivalDate = LocalDate.parse((String) ticket.get("arrival_date"), DateTimeFormatter.ofPattern("dd.MM.yy"));
 
-        if (arrivalDate.isAfter(departureDate)) {
-            ticket.put("arrival_time", ((LocalTime) ticket.get("arrival_time")).plusHours(24));
-        }
 
         return true;
     }
