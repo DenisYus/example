@@ -7,5 +7,4 @@ import java.util.Map;
 public interface TicketAnalyzer {
     void analyzeFlights(List<Map<String, Object>> tickets);
 
-
 }
